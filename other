@@ -3,4 +3,5 @@ Evaluation of Postfix Expressions Using Stack
 Implement two stacks in an array
 deque
 Reversing a Queue
+circular queue
 
