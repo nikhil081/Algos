@@ -9,3 +9,4 @@ stack using queue
 queue using stack
 Missing number in array hint - n(n+1)/2
 rearrange array alternately fist max el then min element then second max
+Find number of pairs (x, y) in an array such that x^y > y^x
