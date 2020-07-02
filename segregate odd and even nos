@@ -1,0 +1,42 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t,n,m;
+    cin>>t;
+    while(t--)
+    {
+        cin>>n;
+        vector<int>ar,t,o;
+        for(long int i=0; i<n; i++)
+        {
+            cin>>m;
+            ar.push_back(m);
+        }
+        for(auto i=ar.begin(); i!=ar.end(); i++)
+        {
+            if(*i%2==0)
+            {
+                t.push_back(*i);
+            }
+        }
+        sort(t.begin(),t.end());
+        for(auto i=ar.begin(); i!=ar.end(); i++)
+        {
+            if(*i%2!=0)
+            {
+                o.push_back(*i);
+            }
+        }
+        sort(o.begin(),o.end());
+        t.insert( t.end(), o.begin(), o.end() );
+
+        for(auto i=t.begin(); i!=t.end(); i++)
+            cout<<*i<<" ";
+        cout<<endl;
+
+    }
+    return 0;
+}
