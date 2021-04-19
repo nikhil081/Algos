@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int ar[n];
+    int i;
+    for(i=0;i<n;i++)
+    cin>>ar[i];
+    map<int,int> m;
+    int flag=0;
+    for(i=0;i<n;i++)
+    {
+        if(m.find(ar[i])==m.end())
+        {
+            m.insert(make_pair(ar[i],1));
+        }
+        else
+        m[(ar[i])]++;
+    }
+    map <int,int>::iterator itr;
+    for(itr=m.begin();itr!=m.end();itr++)
+    {
+        if(itr->second>1)
+        {
+        cout<<itr->first<<" ";
+        flag=1;
+                }   
+    }
+    if(flag==0)
+    cout<<"-1";
+    return 0;
+}
+
+        
+    
+
