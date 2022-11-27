@@ -22,3 +22,5 @@ int main()
     cout<<res;
     return 0;
 }
+
+// max heap means descending and implemented as priority_queue<int,vector<int>>heap;
