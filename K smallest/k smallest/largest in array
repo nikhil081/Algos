@@ -24,3 +24,6 @@ int main()
 }
 
 // max heap means descending and implemented as priority_queue<int,vector<int>>heap;
+
+Similar quest-
+k th distict string in arary
