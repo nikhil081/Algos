@@ -1,0 +1,44 @@
+class Solution {
+public:
+    vector<int> mergeSorted(vector<int>& a, vector<int>& b)
+    {
+        vector<int> res;
+        int i=0, j=0;
+        while (i<a.size() && j<b.size())
+        {
+            if (a[i] < b[j])
+            {
+                res.push_back(a[i]);
+                i++;
+            }
+            else
+            {
+                res.push_back(b[j]);
+                j++;
+            }
+        }
+        while (i < a.size())
+        {
+            res.push_back(a[i]);
+            i++;
+        }
+        while (j < b.size())
+        {
+            res.push_back(b[j]);
+            j++;
+        }
+        return res;
+    }
+    vector<int> sortArray(vector<int>& nums) {
+        if (nums.size() <= 1)
+            return nums;
+        auto start = nums.begin();
+        auto mid = nums.begin() + nums.size()/2;
+        auto end = nums.end();
+        vector<int> v1(start, mid);
+        vector<int> v2(mid, end);
+        vector<int> left = sortArray(v1);
+        vector<int> right = sortArray(v2);
+        return mergeSorted(left, right);
+    }
+};
