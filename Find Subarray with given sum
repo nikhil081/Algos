@@ -1,11 +1,17 @@
- vector<int> subarraySum(int arr[], int n, long long s)
-    {
-         int start=0;
-         int end=0;
-        long long csum = 0; //current sum
-        while(end <= n) {
-            while(csum < s) csum += arr[end++];
-            if(s == csum) return {start+1,end};
-            if(csum > s) csum-=arr[start++];       
+class Solution {
+public:
+    int subarraySum(vector<int>& nums, int k) {
+        int n = nums.size();
+        int sum=0,count=0;
+        unordered_map<int,int> map;
+        map[0] = 1;
+        for (int i=0;i<n;i++){
+            sum= sum+nums[i];
+            if(map.find(sum-k)!=map.end()){
+                count = count + map[sum-k];
+            }
+            map[sum]++;
         }
+        return count;
     }
+};
