@@ -43,4 +43,5 @@ min and max depth of binary trree ( level order traversal )
 heaight of tree
 right left view
 zig zag traversal
-
+symmetric tree 
+construct binrary treee from sorted array ( binary search )
