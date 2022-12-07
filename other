@@ -47,3 +47,6 @@ symmetric tree
 construct binrary treee from sorted array ( binary search )
 invert trree
 path sum
+binary tree paths (left node path from root)
+mode of binary tree
+diameter of tree
