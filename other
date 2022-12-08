@@ -63,3 +63,6 @@ add two nos in ll
 roteate ll 
 delete node in ll
 convert ll into bst
+deleete node from ll
+construct bst from ll
+is balanced tree
